@@ -1,0 +1,7 @@
+import itertools
+
+set_of_numbers = sorted(input().split())
+k = int(input())
+
+for comb in itertools.combinations(set_of_numbers, k):
+    print(*comb)
