@@ -1,0 +1,12 @@
+for hod in range(100, 334):
+    h = hod // 100
+    o = hod // 10 % 10
+    d = hod % 10
+    mat = hod * 3
+    m = mat // 100
+    a = mat // 10 % 10
+    t = mat % 10
+
+    digits = [h, o, d, m, a, t]
+    if len(set(digits)) == 6:
+        print(f"{hod}+{hod}+{hod}={mat}")
