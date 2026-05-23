@@ -1,0 +1,14 @@
+n = int(input())
+if n < 3:
+    print([])
+else:
+    primes = set(range(2, n))
+
+    for i in range(2, int(n**0.5) + 1):
+        if i in primes:
+            #Remove all multiples of i (starting with i*i)
+            multiplies = set(range(i * i, n, i))
+            #create a set of multiples and subtract it from the main set
+            primes -= multiplies
+
+print(sorted(list(primes)))
