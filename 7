@@ -1,0 +1,8 @@
+import itertools
+set_of_numbers = input().split()
+set_of_numbers.sort()
+
+perms = itertools.permutations(set_of_numbers)
+
+for p in perms:
+    print(*p)
