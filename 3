@@ -1,0 +1,10 @@
+sweet = set(input().split())
+n = int(input())
+friends = set()
+
+for _ in range(n):
+    friends.update(input().split())
+
+result = sweet - friends
+
+print(len(result))
