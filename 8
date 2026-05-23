@@ -1,0 +1,13 @@
+import itertools
+
+set_of_numbers = sorted(list(input().split()))
+n = len(set_of_numbers)
+
+all_subsets = []
+
+for i in range(n + 1):
+    for comb in itertools.combinations(set_of_numbers, i):
+        all_subsets.append(list(comb))
+
+for subset in all_subsets:
+    print(*subset)
